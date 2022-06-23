@@ -1,0 +1,364 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media only screen and (max-width: 500px) {
+
+    /*header*/
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+        width: 100%;
+        height: 80px;
+        position: fixed;
+        top: 0; 
+        left: 0;
+    }
+
+    .logoArea{
+        height: 53px;
+        width: 75px;
+        margin-left: 24px;
+        margin-top: 18px;
+    }
+
+    .usersLogoArea{
+        width: 42px;
+        height: 31px;
+        margin-right: 24px;
+        margin-top: 25px;
+    }
+
+    .logo, .usersLogo{
+        height: 100%;
+        width: 100%;
+    }
+  
+    /*body*/
+
+    body{
+        background-color: #eeeeee;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    main{
+        padding-top: 80px;
+        margin-top: 26px;
+    }
+
+    .enterorleftroom,.comummsg, .privatemsg{
+        width: 100%;
+        display: flex;
+        font-weight: 400;
+        font-size: 14px;
+        padding-left: 8px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-top: 4px;
+        border-radius: 2px;
+        line-height: 20px;
+    }
+
+    .hours{
+        font-weight: 300;
+        color: #AAAAAA;
+        margin-right: 5px;
+    }
+
+    .name, .all, .namePrivate{
+        color: #000000;
+        font-weight: bold;
+    }
+
+    .enterorleftroom{
+        background-color: #DCDCDC;
+    }
+
+    .comummsg{
+        background-color: white;
+    }
+
+    .privatemsg{
+        background-color: #FFDEDE;;
+    }
+  
+    /*footer*/
+
+    footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        background-color: white;
+        width: 100%;
+        height: 80px;
+    }
+
+    .inputTextArea{
+       margin-left: 17px;
+       width: 80%;
+    }
+    
+    .paperAirPlaneArea{
+        width: 26px;
+        height: 26px;
+        margin-right: 27px;
+    }
+
+    textarea{
+        border: none;
+        resize: none;
+        outline: none;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        width: 100%;
+        height: 40px;
+        color: #000000;
+        font-size: 18px;
+    }
+
+    .paperAirPlane{
+        height: 100%;
+        width: 100%;
+    }
+
+    textarea::placeholder {
+        color: #000000;
+        font-style: italic;
+        font-size: 18px;
+    }
+
+    
+    /*bônus*/
+
+    /*------- Login Area- -------*/
+    .LoginArea{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        display: none;
+    }
+
+    .backLogin{
+        display: none;
+    }
+
+    .logoLoginArea{
+        width: 130px;
+        height: 92px;
+        margin-top: 72px;
+    }
+
+    .logologin{
+        width: 100%;
+        height: 100%;
+    }
+
+    .textLogin{
+        outline: none;
+        background: #FFFFFF;
+        border: 1px solid #D7D7D7;
+        border-radius: 4px;
+        width: 60%;
+        height: 54px;
+        padding-left: 10px;
+        margin-top: 94px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .textLogin::placeholder{
+        padding-right: 28%;
+        padding-left: 28%;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #AEAEAE;
+    }
+
+    .enterButton{
+        Width: 109px;
+        Height: 45px;
+        line-height: 25px;
+        background: #E7E7E7;
+        color: #696969;
+        border-radius: 9px;
+        font-size: 18px;
+        line-height: 25px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 15px;
+    }
+
+
+
+    /*------Sidebar Area-------*/
+    .darkArea{
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9998;
+        display: none;
+    }
+
+    .darkAreaCall{
+        display: flex;
+    }
+
+    .sideBar{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        align-items: center;
+        width: 60vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 9999;
+        font-family: 'Roboto';
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    /*msgtype*/
+
+    .msgTypeTittle{
+        height: 84px;
+        font-weight: 700;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #000000;
+       
+    }
+
+    .msgTypeTittle > p{
+        width: 57%;
+    }
+
+    .msgType{
+        width: 80%;
+    }
+
+    /*All*/
+
+    .allmsg{
+        display: flex;
+        align-items: center;
+        height: 36px;
+        position: relative;
+    }
+
+    .logoall{
+        width: 29px;
+        height: 23px;
+        margin-right: 12px;
+    }
+
+    .allmsg > p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 400;
+    }
+
+    /*individual*/
+
+    .individual{
+        display: flex; 
+        align-items: center;
+        height: 36px;
+        position: relative;
+    }
+
+    .individuallogo{
+        margin-right: 15px;
+        width: 25px;
+        height: 25px;
+    }
+
+     /*visibility*/
+
+     .visibilityTittle{
+        width: 100%;
+        height: 66px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #000000;
+     }
+
+     .visibilityType{
+        width: 80%;
+     }
+
+     .public, .private{
+        display: flex;
+        align-items: center;
+        height: 36px;
+        position: relative;
+     }
+
+     .padlock{
+        margin-right: 15px;
+        width: 15px;
+        height: 23px;
+     }
+
+     .closeButton{
+        margin-top: 30px;
+        height: 30px;
+        width: 100px;
+        border-radius: 15px;
+        border: solid 2px;
+        color: #939292;
+        background-color: rgb(237, 234, 234);
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+     }
+
+     .closeButton:hover{
+        color: #ffffff;
+        background-color: rgb(56, 184, 13);
+     }
+
+     .notcheck{
+        display: none;
+        position: absolute;
+        left: 200px;
+     }
+
+     .check{
+        display: initial;
+     }
+    
+  }

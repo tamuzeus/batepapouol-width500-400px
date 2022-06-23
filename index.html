@@ -4,15 +4,125 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
+
     <title>Bate-Papo UOL</title>
 </head>
 <body>
-        
+
+    <header>
+        <div class="logoArea"><img src="/img/logo.png" class="logo"></div>
+
+        <div class="usersLogoArea">
+            <img src="/img/user.png" class="usersLogo" onclick="callSideBar(this)">
+        </div>
+    </header>
+
+    <main>
+        <div class="msgsArea">
+
+            <div class="enterorleftroom">
+                <div class="msg"><p><span class="hours">(09:21:45)</span> <span class="name">Fulano</span> entra na sala...</p> </div>
+            </div>
+
+            <div class="comummsg">
+                <div class="msg"><p><span class="hours">(09:21:45)</span> <span class="name">Fulano</span> para <span class="all">todos</span>: Bom dia</p></div>
+            </div>
+
+            <div class="comummsg">
+                <div class="msg"><p><span class="hours">(09:21:45)</span> <span class="name">Ciclano</span> para <span class="all">todos</span>: Oi João :)</p></div>
+            </div>
+
+            <div class="privatemsg">
+                <div class="msg"><p><span class="hours">(09:21:45)</span> <span class="name">Fulano</span> reservadamente para <span class="namePrivate">Maria</span>: Oi gatinha quer tc?</p></div>
+            </div>
+
+            <div class="enterorleftroom">
+                <div class="msg"><p><span class="hours">(09:21:45)</span> <span class="name">Ciclano</span> saiu na sala...</p></div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="inputTextArea">
+            <textarea type="text" name="textarea" placeholder="Escreva aqui..." class="textarea"></textarea>
+        </div>
+        <div class="paperAirPlaneArea"><ion-icon name="paper-plane-outline" class="paperAirPlane"></ion-icon></div>
+    </footer>
+ 
+    
+    
+
+    <div class="LoginArea">
+        <div class="logoLoginArea"><img src="/img/logo 2.png" class="logologin""></div>
+
+        <input type="text" placeholder="Digite seu nome" class="textLogin">
+        <div class="enterButton">Entrar</div>
+    </div>
+
+    <div class="darkArea">
+        <div class="sideBar">
+            <div class="msgTypeTittle">
+                <p>Escolha um contato para enviar mensagem:</p>
+            </div>
+
+            <div class="msgType">
+
+                <div class="allmsg">
+                    <img src="/img/user.png" class="logoall">
+                    <p>Todos</p>
+                    <img src="/img/confirmation.png" class="notcheck check">
+                </div>
+                <div class="individual">
+                    <img src="/img/userssolo.png" class="individuallogo">
+                    <p>João</p>
+                    <img src="/img/confirmation.png" class="notcheck check">
+                </div>
+                <div class="individual">
+                    <img src="/img/userssolo.png" class="individuallogo">
+                    <p>Maria</p>
+                    <img src="/img/confirmation.png" class="notcheck check">
+                </div>
+            </div>
+
+            <div class="visibilityTittle">
+                <p>Escolha a visibilidade:</p>
+            </div>
+
+            <div class="visibilityType">
+
+                <div class="public">
+                    <img src="/img/padlock.png" class="padlock">
+                    <p>Público</p>
+                    <img src="/img/confirmation.png" class="notcheck check">
+                </div>
+                <div class="private">
+                    <img src="/img/padlockclose.png" class="padlock">
+                    <p>Reservadamente</p>
+                    <img src="/img/confirmation.png" class="notcheck check">
+                </div>
+            </div>
+
+            <div class="closeButton" onclick="closeSideBar(this)">
+                <p>Ok</p>
+            </div>
+        </div>
+    </div>
 
 
 
 
+
+
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="/script.js"></script>
 </body>
+
+
 </html>
