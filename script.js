@@ -7,8 +7,6 @@
 function login (){
     const loginArea = document.querySelector(".LoginArea")
     const textLogin = document.querySelector(".textLogin").value
-    console.log(textLogin)
-    console.log(loginArea)
     if(textLogin !== ""){
         loginArea.classList.remove("backLogin")
     }
