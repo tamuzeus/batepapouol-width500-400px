@@ -144,16 +144,20 @@
         background-color: white;
         align-items: center;
         width: 100vw;
-        height: 100vh;
+        height: 1px;
         position: fixed;
         top: 0;
         left: 0;
         z-index: 9999;
-        display: none;
+        
+        overflow-y: hidden;
+        visibility: hidden;
+        transition: 1s;
     }
 
     .backLogin{
-        display: none;
+        height: 100vh;
+        visibility: inherit;
     }
 
     .logoLoginArea{
@@ -205,6 +209,11 @@
         font-family: 'Roboto', sans-serif;
         margin-top: 15px;
     }
+
+    .enterButton:hover{
+        color: #ffffff;
+        background-color: rgb(56, 184, 13);
+     }
 
 
 
@@ -343,7 +352,7 @@
      }
 
      .closeButton{
-        margin-top: 30px;
+        margin-top: 70px;
         height: 30px;
         width: 100px;
         border-radius: 15px;

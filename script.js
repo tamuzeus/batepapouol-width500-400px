@@ -2,9 +2,20 @@
 
 
 
+//---- Login ----
 
-
-
+function login (){
+    const loginArea = document.querySelector(".LoginArea")
+    const textLogin = document.querySelector(".textLogin").value
+    console.log(textLogin)
+    console.log(loginArea)
+    if(textLogin !== ""){
+        loginArea.classList.remove("backLogin")
+    }
+    else if(textLogin === ""){
+        alert("Não pode entrar com campo vazio!")
+    }
+}
 
 //----- Siderbar work -----
 
@@ -48,21 +59,21 @@ function checkVisibility (element){
 
 //padlock
 
-let secondLock = null;
-function padlockOpen(element){
-    let lock = element.querySelector('.visibilityType .padlock')
-    let name = lock.getAttribute('name')
-    if(secondLock !== null){
-        if(name === "lock-closed"){
-            lock.setAttribute("name", "lock-open")
-            secondLock.setAttribute("name", "lock-closed")
-            console.log("funcionou! open")
-        }
-        else{
-            lock.setAttribute("name", "lock-closed")
-            secondLock.setAttribute("name", "lock-open")
-            console.log("funcionou! close")
-        }
-    }
-    secondLock = lock;
-}
+// let secondLock = null;
+// function padlockOpen(element){
+//     let lock = element.querySelector('.visibilityType .padlock')
+//     let name = lock.getAttribute('name')
+//     if(secondLock !== null){
+//         if(name === "lock-closed"){
+//             lock.setAttribute("name", "lock-open")
+//             secondLock.setAttribute("name", "lock-closed")
+//             console.log("funcionou! open")
+//         }
+//         else{
+//             lock.setAttribute("name", "lock-closed")
+//             secondLock.setAttribute("name", "lock-open")
+//             console.log("funcionou! close")
+//         }
+//     }
+//     secondLock = lock;
+// }

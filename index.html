@@ -58,11 +58,11 @@
     
     
 
-    <div class="LoginArea">
+    <div class="LoginArea backLogin">
         <div class="logoLoginArea"><img src="/img/logo 2.png" class="logologin""></div>
 
         <input type="text" placeholder="Digite seu nome" class="textLogin">
-        <div class="enterButton">Entrar</div>
+        <div class="enterButton" onclick="login()">Entrar</div>
     </div>
 
     <div class="darkArea">
@@ -80,12 +80,12 @@
                 <div class="individual" onclick="checkContat(this)">
                     <ion-icon name="person-circle" class="individuallogo"></ion-icon>
                     <p>João</p>
-                    <img src="/img/confirmation.png" class="notcheck ">
+                    <img src="/img/confirmation.png" class="notcheck">
                 </div>
                 <div class="individual" onclick="checkContat(this)">
                     <ion-icon name="person-circle" class="individuallogo"></ion-icon>
                     <p>Maria</p>
-                    <img src="/img/confirmation.png" class="notcheck ">
+                    <img src="/img/confirmation.png" class="notcheck">
                 </div>
             </div>
 
@@ -95,13 +95,13 @@
 
             <div class="visibilityType">
 
-                <div class="public choose" onclick="checkVisibility(this), padlockOpen(this)">
+                <div class="public" onclick="checkVisibility(this)">
                     <ion-icon name="lock-closed" class="padlock"></ion-icon>
                     <p>Público</p>
                     <img src="/img/confirmation.png" class="notcheck check">
                 </div>
-                <div class="private choose" onclick="checkVisibility(this), padlockOpen(this)">
-                    <ion-icon name="lock-open" class="padlock"></ion-icon>
+                <div class="private" onclick="checkVisibility(this)">
+                    <ion-icon name="lock-closed" class="padlock"></ion-icon>
                     <p>Reservadamente</p>
                     <img src="/img/confirmation.png" class="notcheck">
                 </div>
