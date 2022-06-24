@@ -18,7 +18,7 @@
         <div class="logoArea"><img src="/img/logo.png" class="logo"></div>
 
         <div class="usersLogoArea">
-            <img src="/img/user.png" class="usersLogo" onclick="callSideBar(this)">
+            <ion-icon name="people"class="usersLogo" onclick="callSideBar(this)""></ion-icon>
         </div>
     </header>
 
@@ -72,21 +72,20 @@
             </div>
 
             <div class="msgType">
-
-                <div class="allmsg">
-                    <img src="/img/user.png" class="logoall">
+                <div class="allmsg" onclick="checkContat(this)">
+                    <ion-icon name="people" class="logoall"></ion-icon>
                     <p>Todos</p>
                     <img src="/img/confirmation.png" class="notcheck check">
                 </div>
-                <div class="individual">
-                    <img src="/img/userssolo.png" class="individuallogo">
+                <div class="individual" onclick="checkContat(this)">
+                    <ion-icon name="person-circle" class="individuallogo"></ion-icon>
                     <p>João</p>
-                    <img src="/img/confirmation.png" class="notcheck check">
+                    <img src="/img/confirmation.png" class="notcheck ">
                 </div>
-                <div class="individual">
-                    <img src="/img/userssolo.png" class="individuallogo">
+                <div class="individual" onclick="checkContat(this)">
+                    <ion-icon name="person-circle" class="individuallogo"></ion-icon>
                     <p>Maria</p>
-                    <img src="/img/confirmation.png" class="notcheck check">
+                    <img src="/img/confirmation.png" class="notcheck ">
                 </div>
             </div>
 
@@ -96,15 +95,15 @@
 
             <div class="visibilityType">
 
-                <div class="public">
-                    <img src="/img/padlock.png" class="padlock">
+                <div class="public choose" onclick="checkVisibility(this), padlockOpen(this)">
+                    <ion-icon name="lock-closed" class="padlock"></ion-icon>
                     <p>Público</p>
                     <img src="/img/confirmation.png" class="notcheck check">
                 </div>
-                <div class="private">
-                    <img src="/img/padlockclose.png" class="padlock">
+                <div class="private choose" onclick="checkVisibility(this), padlockOpen(this)">
+                    <ion-icon name="lock-open" class="padlock"></ion-icon>
                     <p>Reservadamente</p>
-                    <img src="/img/confirmation.png" class="notcheck check">
+                    <img src="/img/confirmation.png" class="notcheck">
                 </div>
             </div>
 
@@ -120,7 +119,7 @@
 
 
 
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="/script.js"></script>
 </body>
 

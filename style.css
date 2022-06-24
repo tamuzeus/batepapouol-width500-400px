@@ -210,18 +210,21 @@
 
     /*------Sidebar Area-------*/
     .darkArea{
-        background-color: rgba(0, 0, 0, 0.6);
         width: 100vw;
         height: 100vh;
         position: fixed;
         top: 0;
         left: 0;
         z-index: 9998;
-        display: none;
+        overflow-x: hidden;
+        transition: 0.5s;
+        visibility: hidden;
     }
 
     .darkAreaCall{
         display: flex;
+        visibility: inherit;
+        background-color: rgba(0, 0, 0, 0.6);
     }
 
     .sideBar{
@@ -229,7 +232,6 @@
         flex-direction: column;
         background-color: white;
         align-items: center;
-        width: 60vw;
         height: 100vh;
         position: fixed;
         top: 0;
@@ -238,12 +240,20 @@
         font-family: 'Roboto';
         font-size: 16px;
         line-height: 19px;
+        width: 0;
+        transition: 0.5s;
+        overflow-x: hidden;
+    }
+
+    .sideBarCall{
+        width: 60vw;
     }
 
     /*msgtype*/
 
     .msgTypeTittle{
         height: 84px;
+        width: 100vw;
         font-weight: 700;
         font-size: 16px;
         display: flex;
@@ -251,7 +261,7 @@
         justify-content: center;
         text-align: center;
         color: #000000;
-       
+        
     }
 
     .msgTypeTittle > p{
@@ -302,7 +312,7 @@
      /*visibility*/
 
      .visibilityTittle{
-        width: 100%;
+        width: 100vw;
         height: 66px;
         font-style: normal;
         font-weight: 700;
