@@ -94,7 +94,28 @@ function erroMessage(){
 
 ///----- Send message -----
 
+function textSend(element){
+    const textArea = document.querySelector('.textarea').value
+    const sendText = {
+        from: nome,
+        to: "Todos",
+        text: textArea,
+        type: "message" // ou "private_message" para o bônus
+    } 
+    const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", sendText)   
+    
+    promise.then(deuCerto)
+    promise.catch(deuErrado)
+    //quando terminar tento brincar
+}
 
+function deuCerto(){
+    console.log('Ok')
+}
+
+function deuErrado(){
+    console.log('Not Ok')
+}
 
 //----- Siderbar work -----
 
