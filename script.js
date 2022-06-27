@@ -1,19 +1,100 @@
-
-
-
+// ---- variaveis ----
+let nome;
+let objectname;
 
 //---- Login ----
 
 function login (){
-    const loginArea = document.querySelector(".LoginArea")
-    const textLogin = document.querySelector(".textLogin").value
-    if(textLogin !== ""){
-        loginArea.classList.remove("backLogin")
-    }
-    else if(textLogin === ""){
-        alert("Não pode entrar com campo vazio!")
+    nome = document.querySelector(".textLogin").value
+    objectname = {
+        name: nome
+      }
+    const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/participants", objectname)
+    if(nome === ""){
+        alert("Digite um nome para entrar na sala!")
+    }  
+    else{
+        promise.catch(loginNegate)
+        promise.then(loginOk)
     }
 }
+
+function loginOk(){
+    console.log('Logou')
+    const loginArea = document.querySelector(".LoginArea")
+    loginArea.classList.remove("backLogin")
+    setInterval(connectStatus,4000)
+    setInterval(getMessages,4000)
+}
+
+function loginNegate(){
+    console.log('Já tem alguém na sala com este nome, tente outro!')
+}
+
+function connectStatus (){
+    const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/status", objectname)
+    
+}
+
+//---- Recive message ----
+
+function getMessages(){
+    const promise = axios.get("https://mock-api.driven.com.br/api/v6/uol/messages")
+    promise.catch(erroMessage)
+    promise.then(viewMessage)
+}
+
+function viewMessage(element){
+    let msgsArea = document.querySelector(".msgsArea")
+
+    for(let i = 0 ; i < element.data.length ; i++){
+
+        switch(element.data[i].type){
+            case "status":
+                msgsArea.innerHTML += `
+                <div class="enterorleftroom">
+                    <div class="msg">
+                        <p><span class="hours"> ${element.data[i].time} </span> <span class="name"> ${element.data[i].from} </span> ${element.data[i].text}</p> 
+                    </div>
+                </div>
+                `
+                break;
+
+            case "message":
+                msgsArea.innerHTML += `
+                <div class="comummsg">
+                    <div class="msg">
+                        <p><span class="hours"> ${element.data[i].time} </span> <span class="name"> ${element.data[i].from} </span> para <span class="all"> ${element.data[i].to} </span>: ${element.data[i].text}</p>
+                    </div>
+                </div>
+                `
+                break;
+
+            case nome === element.data[i],element.data[i].from && "private_message":
+                msgsArea.innerHTML += `
+                <div class="privatemsg">
+                    <div class="msg">
+                        <p><span class="hours"> ${element.data[i].time} </span> <span class="name"> ${element.data[i].from} </span> reservadamente para <span class="namePrivate"> ${element.data[i].to} </span>: ${element.data[i].text}</p>
+                    </div>
+                </div>
+                `
+                break;
+        }
+    }
+
+    let msg = document.querySelectorAll(".msg")
+    last = msg[msg.length-1]
+    last.scrollIntoView()
+}
+
+function erroMessage(){
+    console.log('Erro em receber a mensagem')
+    window.location.reload()
+}
+
+///----- Send message -----
+
+
 
 //----- Siderbar work -----
 
@@ -54,24 +135,3 @@ function checkVisibility (element){
     }
     checked.classList.add('check')
 }
-
-//padlock
-
-// let secondLock = null;
-// function padlockOpen(element){
-//     let lock = element.querySelector('.visibilityType .padlock')
-//     let name = lock.getAttribute('name')
-//     if(secondLock !== null){
-//         if(name === "lock-closed"){
-//             lock.setAttribute("name", "lock-open")
-//             secondLock.setAttribute("name", "lock-closed")
-//             console.log("funcionou! open")
-//         }
-//         else{
-//             lock.setAttribute("name", "lock-closed")
-//             secondLock.setAttribute("name", "lock-open")
-//             console.log("funcionou! close")
-//         }
-//     }
-//     secondLock = lock;
-// }
