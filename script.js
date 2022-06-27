@@ -30,6 +30,8 @@ function loginOk(){
 
 function loginNegate(){
     alert('Já tem alguém na sala com este nome, tente outro!')
+    const loginArea = document.querySelector(".LoginArea")
+    loginArea.classList.add("backLogin")
 }
 
 function connectStatus (){
@@ -62,7 +64,7 @@ function viewMessage(element){
     let msgsArea = document.querySelector(".msgsArea")
 
     for(let i = 0 ; i < element.data.length ; i++){
-
+        msgsArea.innerHTML += " "
         switch(element.data[i].type){
             case "status":
                 msgsArea.innerHTML += `
