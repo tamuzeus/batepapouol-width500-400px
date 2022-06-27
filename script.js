@@ -70,7 +70,7 @@ function viewMessage(element){
                 `
                 break;
 
-            case nome === element.data[i],element.data[i].from && "private_message":
+            case nome === element.data[i], element.data.from && "private_message":
                 msgsArea.innerHTML += `
                 <div class="privatemsg">
                     <div class="msg">
