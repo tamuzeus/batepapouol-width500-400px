@@ -24,19 +24,14 @@ function loginOk(){
     const loginArea = document.querySelector(".LoginArea")
     loginArea.classList.remove("backLogin")
     loading ()
-    setInterval(connectStatus,4000)
-    setInterval(getMessages,4000)
+    getMessages() 
+    setInterval(getMessages,5000)
 }
 
 function loginNegate(){
     alert('Já tem alguém na sala com este nome, tente outro!')
     const loginArea = document.querySelector(".LoginArea")
     loginArea.classList.add("backLogin")
-}
-
-function connectStatus (){
-    const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/status", objectname)
-    
 }
 
 
@@ -49,7 +44,7 @@ function loading (){
 
         backgroundWhite.classList.remove("backgroundWhite")
         loader.classList.remove("loader")
-    }, 4500)
+    }, 3000)
 }
 
 //---- Recive message ----
@@ -62,9 +57,10 @@ function getMessages(){
 
 function viewMessage(element){
     let msgsArea = document.querySelector(".msgsArea")
-
+    msgsArea.innerHTML += ""
     for(let i = 0 ; i < element.data.length ; i++){
-        msgsArea.innerHTML += " "
+        
+        window.clearInterval(50)
         switch(element.data[i].type){
             case "status":
                 msgsArea.innerHTML += `
