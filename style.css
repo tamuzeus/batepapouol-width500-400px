@@ -12,7 +12,7 @@
         justify-content: space-between;
         background-color: white;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
-        width: 100%;
+        width: 100vw;
         height: 80px;
         position: fixed;
         top: 0; 
@@ -48,6 +48,16 @@
     main{
         padding-top: 80px;
         margin-top: 26px;
+        padding-bottom: 80px;
+        margin-bottom: 26px;
+    }
+
+    .msgsArea{
+        width: 100vw;
+    }
+
+    .msg{
+        word-break: break-word;
     }
 
     .enterorleftroom,.comummsg, .privatemsg{
@@ -76,14 +86,17 @@
 
     .enterorleftroom{
         background-color: #DCDCDC;
+        width: 100vw;
     }
 
     .comummsg{
         background-color: white;
+        width: 100vw;
     }
 
     .privatemsg{
         background-color: #FFDEDE;;
+        width: 100vw;
     }
   
     /*footer*/
@@ -95,7 +108,7 @@
         position: fixed;
         bottom: 0;
         background-color: white;
-        width: 100%;
+        width: 100vw;
         height: 80px;
     }
 
