@@ -25,7 +25,7 @@
     <main>
         <div class="msgsArea">
 
-            <div class="enterorleftroom">
+            <!-- <div class="enterorleftroom">
                 <div class="msg"><p><span class="hours">(09:21:45)</span> <span class="name">Fulano</span> entra na sala...</p> </div>
             </div>
 
@@ -33,20 +33,21 @@
                 <div class="msg"><p><span class="hours">(09:21:45)</span> <span class="name">Fulano</span> para <span class="all">todos</span>: Bom dia</p></div>
             </div>
 
-            <div class="comummsg">
-                <div class="msg"><p><span class="hours">(09:21:45)</span> <span class="name">Ciclano</span> para <span class="all">todos</span>: Oi João :)</p></div>
-            </div>
-
             <div class="privatemsg">
-                <div class="msg"><p><span class="hours">(09:21:45)</span> <span class="name">Fulano</span> reservadamente para <span class="namePrivate">Maria</span>: Oi gatinha quer tc?</p></div>
+                <div class="msg"><p><span class="hours">(09:21:45)</span> <span class="name">Fulano</span> reservadamente para <span class="namePrivate">Maria</span>: Oi gatinha quer tc? </p></div>
             </div>
 
             <div class="enterorleftroom">
                 <div class="msg"><p><span class="hours">(09:21:45)</span> <span class="name">Ciclano</span> saiu na sala...</p></div>
-            </div>
+            </div>  -->
+
         </div>
     </main>
 
+    <!-- let msg = document.querySelectorAll(".msg")
+    last = msg[msg.length-1]
+    last.scrollIntoView() -->
+    <!-- setInterval(getMessages,4000) -->
 
     <footer>
         <div class="inputTextArea">
@@ -54,9 +55,6 @@
         </div>
         <div class="paperAirPlaneArea"><ion-icon name="paper-plane-outline" class="paperAirPlane"></ion-icon></div>
     </footer>
- 
-    
-    
 
     <div class="LoginArea backLogin">
         <div class="logoLoginArea"><img src="/img/logo 2.png" class="logologin""></div>
@@ -118,8 +116,9 @@
 
 
 
-
+    
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/script.js"></script>
 </body>
 
