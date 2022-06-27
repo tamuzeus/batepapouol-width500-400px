@@ -24,8 +24,8 @@ function loginOk(){
     const loginArea = document.querySelector(".LoginArea")
     loginArea.classList.remove("backLogin")
     loading ()
-    getMessages() 
-    setInterval(getMessages,5000)
+    setInterval(connectStatus,4000)
+    setInterval(getMessages,4000)
 }
 
 function loginNegate(){
@@ -34,6 +34,9 @@ function loginNegate(){
     loginArea.classList.add("backLogin")
 }
 
+function connectStatus (){
+    const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/status", objectname)
+}
 
 ///--- loading area ----
 
@@ -44,7 +47,7 @@ function loading (){
 
         backgroundWhite.classList.remove("backgroundWhite")
         loader.classList.remove("loader")
-    }, 3000)
+    }, 3700)
 }
 
 //---- Recive message ----
@@ -57,10 +60,10 @@ function getMessages(){
 
 function viewMessage(element){
     let msgsArea = document.querySelector(".msgsArea")
-    msgsArea.innerHTML += ""
+    msgsArea.innerHTML = ""
     for(let i = 0 ; i < element.data.length ; i++){
         
-        window.clearInterval(50)
+        
         switch(element.data[i].type){
             case "status":
                 msgsArea.innerHTML += `
@@ -129,7 +132,6 @@ function deuCerto(){
 
 function deuErrado(){
     console.log('Not Ok')
-    window.location.reload()
 }
 
 //----- Siderbar work -----
