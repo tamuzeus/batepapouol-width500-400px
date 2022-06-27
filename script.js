@@ -28,7 +28,7 @@ function loginOk(){
 }
 
 function loginNegate(){
-    console.log('Já tem alguém na sala com este nome, tente outro!')
+    alert('Já tem alguém na sala com este nome, tente outro!')
 }
 
 function connectStatus (){
@@ -70,7 +70,7 @@ function viewMessage(element){
                 `
                 break;
 
-            case nome === element.data[i], element.data.from && "private_message":
+            case nome === element.data[i].to && "private_message":
                 msgsArea.innerHTML += `
                 <div class="privatemsg">
                     <div class="msg">
@@ -79,6 +79,8 @@ function viewMessage(element){
                 </div>
                 `
                 break;
+
+          
         }
     }
 
@@ -115,6 +117,7 @@ function deuCerto(){
 
 function deuErrado(){
     console.log('Not Ok')
+    window.location.reload()
 }
 
 //----- Siderbar work -----
