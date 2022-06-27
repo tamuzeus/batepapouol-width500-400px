@@ -23,6 +23,7 @@ function loginOk(){
     console.log('Logou')
     const loginArea = document.querySelector(".LoginArea")
     loginArea.classList.remove("backLogin")
+    loading ()
     setInterval(connectStatus,4000)
     setInterval(getMessages,4000)
 }
@@ -34,6 +35,19 @@ function loginNegate(){
 function connectStatus (){
     const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/status", objectname)
     
+}
+
+
+///--- loading area ----
+
+function loading (){
+    setTimeout(() => {
+        let backgroundWhite = document.querySelector(".backgroundWhite")
+        let loader = document.querySelector(".loader")
+
+        backgroundWhite.classList.remove("backgroundWhite")
+        loader.classList.remove("loader")
+    }, 4500)
 }
 
 //---- Recive message ----
