@@ -24,8 +24,8 @@ function loginOk(){
     const loginArea = document.querySelector(".LoginArea")
     loginArea.classList.remove("backLogin")
     loading ()
-    setInterval(connectStatus,4000)
-    setInterval(getMessages,4000)
+    setInterval(connectStatus,3000)
+    setInterval(getMessages,2000)
 }
 
 function loginNegate(){
@@ -47,7 +47,7 @@ function loading (){
 
         backgroundWhite.classList.remove("backgroundWhite")
         loader.classList.remove("loader")
-    }, 3700)
+    }, 2200)
 }
 
 //---- Recive message ----
